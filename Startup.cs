@@ -6,7 +6,7 @@ using PrayerTimes.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using PrayerTimes.Services;
 
 namespace PrayerTimes
 {
@@ -27,6 +27,8 @@ namespace PrayerTimes
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddHttpClient<IPrayerTimesService, PrayerTimesService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
