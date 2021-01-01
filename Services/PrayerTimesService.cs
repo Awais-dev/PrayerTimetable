@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json;
+using PrayerTimes.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -16,15 +14,15 @@ namespace PrayerTimes.Services
             _httpClient = httpClient;
         }
 
-        public async Task<string> FetchTodayPrayerTime(string Url)
+        public async Task<Rootobject> FetchTodayPrayerTime(string Url)
         {
             using var response = await _httpClient.GetAsync(Url, HttpCompletionOption.ResponseHeadersRead);
 
             response.EnsureSuccessStatusCode();
 
-            var result = await response.Content.ReadAsStringAsync();
+            var resultString = await response.Content.ReadAsStringAsync();
 
-            return result;
+            return JsonConvert.DeserializeObject<Rootobject>(resultString);
         }
 
     }

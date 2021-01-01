@@ -7,6 +7,13 @@
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20210101191754_updatetypesforJSON.cs" />
+    <Compile Remove="Data\Migrations\20210101191754_updatetypesforJSON.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210101193904_updatedbforjson.cs" />
+    <Compile Remove="Data\Migrations\20210101193904_updatedbforjson.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.*" />

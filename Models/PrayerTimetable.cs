@@ -8,15 +8,9 @@ namespace PrayerTimes.Models
         public Guid Id { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
-
-        public string Day { get; set; }
-
-        public string Month { get; set; }
+        public Date Date { get; set; }
 
         public Prayer Fajr { get; set; }
-
-        public DateTime Sunrise { get; set; }
 
         public Prayer Dhuhr { get; set; }
 
