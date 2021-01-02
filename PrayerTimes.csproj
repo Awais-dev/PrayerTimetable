@@ -12,6 +12,42 @@
     <Compile Remove="Data\Migrations\20210101191754_updatetypesforJSON.Designer.cs" />
     <Compile Remove="Data\Migrations\20210101193904_updatedbforjson.cs" />
     <Compile Remove="Data\Migrations\20210101193904_updatedbforjson.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102010229_changedatetostring.cs" />
+    <Compile Remove="Data\Migrations\20210102010229_changedatetostring.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102010653_updateDbforJson.cs" />
+    <Compile Remove="Data\Migrations\20210102010653_updateDbforJson.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102010755_updatedbforJson.cs" />
+    <Compile Remove="Data\Migrations\20210102010755_updatedbforJson.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102012534_test.cs" />
+    <Compile Remove="Data\Migrations\20210102012534_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102022900_test.cs" />
+    <Compile Remove="Data\Migrations\20210102022900_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102023051_updateFKs.cs" />
+    <Compile Remove="Data\Migrations\20210102023051_updateFKs.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102024815_test.cs" />
+    <Compile Remove="Data\Migrations\20210102024815_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102025900_test.cs" />
+    <Compile Remove="Data\Migrations\20210102025900_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102030110_test.cs" />
+    <Compile Remove="Data\Migrations\20210102030110_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102030458_updateDatabaseandFks.cs" />
+    <Compile Remove="Data\Migrations\20210102030458_updateDatabaseandFks.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102030826_test.cs" />
+    <Compile Remove="Data\Migrations\20210102030826_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102031249_test.cs" />
+    <Compile Remove="Data\Migrations\20210102031249_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102032040_test.cs" />
+    <Compile Remove="Data\Migrations\20210102032040_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102032138_test.cs" />
+    <Compile Remove="Data\Migrations\20210102032138_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102034724_test.cs" />
+    <Compile Remove="Data\Migrations\20210102034724_test.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102034754_addCollectionOfPrayers.cs" />
+    <Compile Remove="Data\Migrations\20210102034754_addCollectionOfPrayers.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102040708_updateDb.cs" />
+    <Compile Remove="Data\Migrations\20210102040708_updateDb.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102040938_test.cs" />
+    <Compile Remove="Data\Migrations\20210102040938_test.Designer.cs" />
   </ItemGroup>
 
 

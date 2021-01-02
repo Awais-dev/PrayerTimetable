@@ -10,7 +10,10 @@ namespace PrayerTimes.Data
         {
         }
 
-        public DbSet<PrayerTimetable> PrayerTimetable { get; set; }
+        public DbSet<PrayerTimetable> PrayerTimetables { get; set; }
+
+        public DbSet<Prayer> Prayers { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

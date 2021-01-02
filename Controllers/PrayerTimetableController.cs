@@ -18,68 +18,16 @@ namespace PrayerTimes.Controllers
 
         private readonly IPrayerTimesService _prayerTimesService;
 
-        private readonly ApplicationDbContext _applicationDbContext;
-        public PrayerTimetableController(
-            IPrayerTimesService prayerTimesService,
-            ApplicationDbContext applicationDbContext)
+        public PrayerTimetableController(IPrayerTimesService prayerTimesService)
         {
             _prayerTimesService = prayerTimesService;
-            _applicationDbContext = applicationDbContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
+            var prayerTimes = await _prayerTimesService.GetDailyPrayerTimes(url);
 
-        public async Task<IActionResult> GetDailyPrayerTimes()
-        {
-
-            var prayerTimes = await _prayerTimesService.FetchTodayPrayerTime(url);
-
-            var mappedPrayerTimes = Map(prayerTimes);
-
-            _applicationDbContext.Add(mappedPrayerTimes);
-
-            await _applicationDbContext.SaveChangesAsync();
-
-            return Ok(mappedPrayerTimes);
-        }
-
-        public PrayerTimetable Map(Rootobject prayerTimes)
-        {
-            var prayerTimeDto = new PrayerTimetable()
-            {
-                Id = Guid.NewGuid(),
-                Date = prayerTimes.data.date,
-                Fajr =
-                {
-                    Id = Guid.NewGuid(),
-                    Start = prayerTimes.data.timings.Fajr
-                },
-                Dhuhr =
-                {
-                    Id = Guid.NewGuid(),
-                    Start = prayerTimes.data.timings.Dhuhr
-                },
-                Asr =
-                {
-                    Id = Guid.NewGuid(),
-                    Start = prayerTimes.data.timings.Asr
-                },
-                Maghrib =
-                {
-                    Id = Guid.NewGuid(),
-                    Start = prayerTimes.data.timings.Maghrib
-                },
-                Isha =
-                {
-                    Id = Guid.NewGuid(),
-                    Start = prayerTimes.data.timings.Isha
-                }
-            };
-
-            return prayerTimeDto;
+            return Ok(prayerTimes);
         }
     }
 }
